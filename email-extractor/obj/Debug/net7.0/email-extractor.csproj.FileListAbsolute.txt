@@ -1,0 +1,15 @@
+/Users/christoph/Development/email-extractor/email-extractor/bin/Debug/net7.0/email-extractor
+/Users/christoph/Development/email-extractor/email-extractor/bin/Debug/net7.0/email-extractor.deps.json
+/Users/christoph/Development/email-extractor/email-extractor/bin/Debug/net7.0/email-extractor.runtimeconfig.json
+/Users/christoph/Development/email-extractor/email-extractor/bin/Debug/net7.0/email-extractor.dll
+/Users/christoph/Development/email-extractor/email-extractor/bin/Debug/net7.0/email-extractor.pdb
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.csproj.AssemblyReference.cache
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.GeneratedMSBuildEditorConfig.editorconfig
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.AssemblyInfoInputs.cache
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.AssemblyInfo.cs
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.csproj.CoreCompileInputs.cache
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.dll
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/refint/email-extractor.dll
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.pdb
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/email-extractor.genruntimeconfig.cache
+/Users/christoph/Development/email-extractor/email-extractor/obj/Debug/net7.0/ref/email-extractor.dll
