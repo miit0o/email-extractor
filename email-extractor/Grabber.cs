@@ -1,12 +1,20 @@
 ﻿using System;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace email_extractor
 {
     public class Grabber
     {
+        internal static Boolean safeToFile;
+        internal static String filePath;
         internal static void GrabCode(String url)
         {
+            if (safeToFile == true)
+            {
+                CreateFile();
+            }
+
             //Get Page Source Code
             using (HttpClient client = new())
             {
@@ -41,15 +49,48 @@ namespace email_extractor
                     }
                     else
                     {
-                        Console.WriteLine(match.Value);
-                        prevMail = match.Value;
+                        if (safeToFile = true)
+                        {
+                            //append to file
+                            using(StreamWriter sw = File.AppendText(filePath))
+                            {
+                                sw.WriteLine(match);
+                            }
+
+
+                            Console.WriteLine(match.Value);
+                            prevMail = match.Value;
+                        }
+                        else
+                        {
+                            Console.WriteLine(match.Value);
+                            prevMail = match.Value;
+                        }
                     }
+                }
+                if (safeToFile == true)
+                {
+                    Console.WriteLine("Results written to: " + filePath);
                 }
             }
             else
             {
                 Console.WriteLine("No email addresses found.");
             }
+        }
+
+        public static String GetTimestamp(DateTime value)
+        {
+            return value.ToString("yyyyMMddHHmmss");
+        }
+        internal static void CreateFile()
+        {
+            //get timestamp
+            String timeStamp = GetTimestamp(DateTime.Now);
+
+            //create file
+            filePath = timeStamp + "-output.txt";
+            using (StreamWriter sw = File.CreateText(filePath));
         }
     }
 }
