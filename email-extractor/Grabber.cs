@@ -30,15 +30,25 @@ namespace email_extractor
 
             if (matches.Count > 0)
             {
-                Console.WriteLine("Email addresses found in the string:");
+                Console.WriteLine("Good news! I found some email-addresses");
+                string prevMail = "";
                 foreach (Match match in matches)
                 {
-                    Console.WriteLine(match.Value);
+                    //Check if has been output already
+                    if (match.Value.Equals(prevMail))
+                    {
+                        //skip to next
+                    }
+                    else
+                    {
+                        Console.WriteLine(match.Value);
+                        prevMail = match.Value;
+                    }
                 }
             }
             else
             {
-                Console.WriteLine("No email addresses found in the string.");
+                Console.WriteLine("No email addresses found.");
             }
         }
     }
