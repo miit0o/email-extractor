@@ -80,6 +80,7 @@ namespace email_extractor
                 }
                 if (safeToFile == true)
                 {
+                    RemoveDuplicates(filePath);
                     Console.WriteLine("Results written to: " + filePath);
                 }
             }
@@ -101,6 +102,63 @@ namespace email_extractor
             //create file
             filePath = timeStamp + "-output.txt";
             using (StreamWriter sw = File.CreateText(filePath));
+        }
+        internal static void RemoveDuplicates(String filePath)
+        {
+            // Removes duplicates from text tile
+
+            List<string> lines = new List<string>();
+            List<string> uniqueLines = new List<string>();
+
+            // Read the content of the text file
+            try
+            {
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                }
+            }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine($"File '{filePath}' not found.");
+                return;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error reading the file: {ex.Message}");
+                return;
+            }
+
+            // Remove duplicates and store unique lines in a new list
+            foreach (string line in lines)
+            {
+                if (!uniqueLines.Contains(line))
+                {
+                    uniqueLines.Add(line);
+                }
+            }
+
+            // Write the unique lines back to the text file
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    foreach (string line in uniqueLines)
+                    {
+                        writer.WriteLine(line);
+                    }
+                }
+
+                Console.WriteLine("Duplicates removed successfully.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error writing to the file: {ex.Message}");
+            }
         }
     }
 }
