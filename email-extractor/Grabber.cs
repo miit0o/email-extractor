@@ -15,6 +15,16 @@ namespace email_extractor
                 CreateFile();
             }
 
+            //fix URL if necessary
+            if (url.StartsWith("http://") || url.StartsWith("https://"))
+            {
+                // all good :)
+            }
+            else
+            {
+                url = "http://" + url;
+            }
+
             //Get Page Source Code
             using (HttpClient client = new())
             {
@@ -49,7 +59,7 @@ namespace email_extractor
                     }
                     else
                     {
-                        if (safeToFile = true)
+                        if (safeToFile == true)
                         {
                             //append to file
                             using(StreamWriter sw = File.AppendText(filePath))
