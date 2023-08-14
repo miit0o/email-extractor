@@ -1,20 +1,16 @@
 ﻿<Properties StartupConfiguration="{971C7FEE-0782-47C6-8FEF-BF5543D9FDEB}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="email-extractor/Grabber.cs">
+  <AuthorInfo Name="miit0o" Email="christoph@rustige.me" Copyright="" Company="" Trademark="" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="email-extractor/Program.cs">
     <Files>
-      <File FileName="email-extractor/Program.cs" Line="13" Column="2" />
-      <File FileName="email-extractor/Grabber.cs" Line="131" Column="14" />
+      <File FileName="email-extractor/Program.cs" Line="10" Column="2" />
+      <File FileName="email-extractor/Grabber.cs" Line="10" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="email-extractor">
-            <Node name="email-extractor">
-              <Node name="Grabber.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node name="email-extractor" selected="True" />
         </State>
       </Pad>
     </Pads>
@@ -23,4 +19,5 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>
