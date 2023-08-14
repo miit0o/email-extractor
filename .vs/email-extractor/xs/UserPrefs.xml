@@ -1,24 +1,25 @@
 ﻿<Properties StartupConfiguration="{971C7FEE-0782-47C6-8FEF-BF5543D9FDEB}|Default">
-  <MonoDevelop.Ide.ItemProperties.email-extractor FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="email-extractor/Program.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="email-extractor/Grabber.cs">
     <Files>
       <File FileName="email-extractor/Program.cs" Line="13" Column="2" />
+      <File FileName="email-extractor/Grabber.cs" Line="131" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="email-extractor" expanded="True">
-            <Node name="email-extractor" expanded="True">
-              <Node name="Program.cs" selected="True" />
+          <Node name="email-extractor">
+            <Node name="email-extractor">
+              <Node name="Grabber.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.email-extractor PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

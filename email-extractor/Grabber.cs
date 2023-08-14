@@ -160,5 +160,10 @@ namespace email_extractor
                 Console.WriteLine($"Error writing to the file: {ex.Message}");
             }
         }
+
+        internal static void ScanLinks(String url)
+        {
+            // Scan for other Links on the Page with the same base url
+        }
     }
 }
