@@ -3,3 +3,4 @@ email-extractor/bin/Debug/*
 email-extractor/obj/Release*
 email-extractor/obj/Debug/*
 email-extractor/Properties/PublishProfiles/*
+.vs/email-extractor/xs/UserPrefs.xml
