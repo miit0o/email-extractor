@@ -15,15 +15,20 @@ namespace email_extractor
                 CreateFile();
             }
 
-            //fix URL if necessary
-            if (url.StartsWith("http://") || url.StartsWith("https://"))
+            string urlString = url;
+            bool isUrl = IsUrl(urlString);
+
+            if (isUrl)
             {
-                // all good :)
+                Console.WriteLine($"{urlString} is a valid URL.");
             }
             else
             {
-                url = "http://" + url;
+                Console.WriteLine($"You provided an invalid url. {urlString} is not a valid URL.");
+                //exit program?
+                System.Environment.Exit(0);
             }
+
 
             //Get Page Source Code
             using (HttpClient client = new())
@@ -161,9 +166,16 @@ namespace email_extractor
             }
         }
 
+        static bool IsUrl(string input)
+        {
+            return Uri.TryCreate(input, UriKind.Absolute, out Uri result) &&
+                   (result.Scheme == Uri.UriSchemeHttp || result.Scheme == Uri.UriSchemeHttps);
+        }
+
         internal static void ScanLinks(String url)
         {
             // Scan for other Links on the Page with the same base url
         }
+
     }
 }
